@@ -25,7 +25,7 @@ public class CoefficientController {
         method = RequestMethod.PUT,
         produces = "application/json;charset=UTF-8"
     )
-    public Coefficient calculate(
+    public String calculate(
         @PathVariable(value = "id") String id,
         HttpServletRequest request,
         HttpServletResponse response
@@ -37,10 +37,8 @@ public class CoefficientController {
 
         optionalCoefficient.orElseThrow(() -> new Exception("No Entity Found"));
         Coefficient coefficient = optionalCoefficient.get();
-        coefficient.calculate();
+        return coefficient.calculate();
 
-        coefficientRepository.save(coefficient);
-        return coefficient;
     }
 }
 //>>> Clean Arch / Inbound Adaptor
