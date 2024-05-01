@@ -18,7 +18,7 @@ public class Coefficient {
     private Long topicId;
 
     @ElementCollection
-    private List<Values> values;
+    private List<Value> values;
 
     public static CoefficientRepository repository() {
         CoefficientRepository coefficientRepository = MeteringApplication.applicationContext.getBean(
