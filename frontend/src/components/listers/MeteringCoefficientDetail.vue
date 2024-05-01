@@ -6,7 +6,7 @@
 
         <v-card-text>
             <div>
-                <Number label="TopicId" v-model="item.topicId" :editMode="editMode" @change="change" />
+                <String label="TopicId" v-model="item.topicId" :editMode="editMode" @change="change" />
             </div>
             <ValueManager offline label="Values" v-model="item.values" :editMode="false" @change="change" />
         </v-card-text>

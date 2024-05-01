@@ -16,7 +16,7 @@
         </v-card-title >        
 
         <v-card-text>
-            <Number v-if="editMode" label="TopicId" v-model="value.topicId" :editMode="editMode" :inputUI="''"/>
+            <String v-if="editMode" label="TopicId" v-model="value.topicId" :editMode="editMode" :inputUI="''"/>
             <List&lt;Value&gt; offline label="Values" v-model="value.values" :editMode="editMode" @change="change"/>
             <ValueManager offline label="Values" v-model="value.values" :editMode="editMode" @change="change"/>
         </v-card-text>

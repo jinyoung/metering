@@ -113,7 +113,7 @@
             this.values = temp.data._embedded.coefficients;
             
             this.newValue = {
-                'topicId': 0,
+                'topicId': '',
                 'values': [],
             }
         },
