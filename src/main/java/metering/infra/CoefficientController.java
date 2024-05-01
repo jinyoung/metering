@@ -19,5 +19,28 @@ public class CoefficientController {
 
     @Autowired
     CoefficientRepository coefficientRepository;
+
+    @RequestMapping(
+        value = "coefficients/{id}/calculate",
+        method = RequestMethod.PUT,
+        produces = "application/json;charset=UTF-8"
+    )
+    public Coefficient calculate(
+        @PathVariable(value = "id") String id,
+        HttpServletRequest request,
+        HttpServletResponse response
+    ) throws Exception {
+        System.out.println("##### /coefficient/calculate  called #####");
+        Optional<Coefficient> optionalCoefficient = coefficientRepository.findById(
+            id
+        );
+
+        optionalCoefficient.orElseThrow(() -> new Exception("No Entity Found"));
+        Coefficient coefficient = optionalCoefficient.get();
+        coefficient.calculate();
+
+        coefficientRepository.save(coefficient);
+        return coefficient;
+    }
 }
 //>>> Clean Arch / Inbound Adaptor
