@@ -14,11 +14,10 @@ import metering.MeteringApplication;
 public class Coefficient {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long topicId;
+    private String topicId;
 
     @ElementCollection
-    private List<Values> values;
+    private List<Value> values;
 
     public static CoefficientRepository repository() {
         CoefficientRepository coefficientRepository = MeteringApplication.applicationContext.getBean(

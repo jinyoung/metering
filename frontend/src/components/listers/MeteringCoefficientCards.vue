@@ -108,7 +108,7 @@
             me.values = temp.data._embedded.coefficients;
             
             me.newValue = {
-                'topicId': 0,
+                'topicId': '',
                 'values': [],
             }
         },

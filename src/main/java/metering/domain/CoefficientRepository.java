@@ -10,4 +10,4 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
     path = "coefficients"
 )
 public interface CoefficientRepository
-    extends PagingAndSortingRepository<Coefficient, Long> {}
+    extends PagingAndSortingRepository<Coefficient, String> {}
