@@ -12,5 +12,12 @@ import org.springframework.beans.BeanUtils;
 @Embeddable
 @Data
 
-public class Value {}
+public class Value {
+
+    private String key;
+
+    private String value;
+
+    private Date activateFrom;
+}
 //>>> DDD / Value Object
