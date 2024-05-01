@@ -13,12 +13,5 @@ import org.springframework.beans.BeanUtils;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Value {
-
-    private String key;
-
-    private String value;
-
-    private Date activateFrom;
-}
+public class Value {}
 //>>> DDD / Value Object
