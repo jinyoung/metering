@@ -11,7 +11,6 @@ import org.springframework.beans.BeanUtils;
 //<<< DDD / Value Object
 @Embeddable
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class Value {}
 //>>> DDD / Value Object
