@@ -8,7 +8,7 @@ import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
-@EnableBinding(KafkaProcessor.class)
+//@EnableBinding(KafkaProcessor.class)
 @EnableFeignClients
 public class MeteringApplication {
 

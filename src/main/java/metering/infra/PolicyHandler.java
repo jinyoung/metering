@@ -20,7 +20,7 @@ public class PolicyHandler {
     @Autowired
     CoefficientRepository coefficientRepository;
 
-    @StreamListener(KafkaProcessor.INPUT)
+ //   @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}
 }
 //>>> Clean Arch / Inbound Adaptor
